@@ -54,4 +54,12 @@ public class GetStep {
         String gender = result.getBody().jsonPath().get("[0].gender").toString();
         Assert.assertEquals(gender, g);
     }
+
+
+    @Given("get single user in gorest api")
+    public void getSingleUserInGorestApi() {
+        result = request.get( "/public/v2/users/5050");
+        int statusCode = result.getStatusCode();
+        Assert.assertEquals(statusCode,200);
+    }
 }

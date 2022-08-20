@@ -7,3 +7,7 @@ Scenario: Get Request GO-Rest API
   And name should be "Md Ausssl khan"
   And email should be "abul@bsabssusls.com"
   Then gender should be "male"
+
+  @Get
+  Scenario: Get single User in gorest api
+    Given get single user in gorest api
