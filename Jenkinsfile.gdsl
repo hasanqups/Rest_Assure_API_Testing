@@ -24,7 +24,7 @@ node('master') {
         for (i in 0..<reports.size()) {
             def testCases = reports[i]."elements"
             for (j in 0..<testCases.size()) {
-                if (testCases[j]."after" != null) {
+                if (testCases[j]."steps" != null) {
                     totalCount++
                     if (testCases[j].toString().contains("\"status\":\"failed\"")
                             || testCases[j].toString().contains("\"status\":\"skipped\"")) {
