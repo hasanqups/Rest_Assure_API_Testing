@@ -108,6 +108,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M6</version>
                 <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <includes>
+                        <include>TestRunner.java</include>
+                    </includes>
                     <properties>
                         <property>
                             <name>dataproviderthreadcount</name>
